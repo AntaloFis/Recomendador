@@ -11,9 +11,10 @@ class ETL(filename: str):
         df=process(dataframe)
         return df
 
+    def load(filename: str) -> pd.DataFrame:
+        df=process(load_csv(filename))
+        return df
+
     def __init__(self) -> None:
-        self.filename=filename
+        self.dataframe=load(filename)
         pass
-
-
-    
