@@ -34,4 +34,4 @@ def model_mlp(nu, ni):
 if __name__ == '__main__':
     r = pd.read_csv("/workspaces/Recomendador/data/ratings.csv")
     mod = model_mlp(611, 193610)
-    mod.fit([r.userId, r.movieId], r.rating, validation_split=0.2, epochs=100)
+    mod.fit([r.userId, r.movieId], r.rating, validation_split=0.2, epochs=50)
