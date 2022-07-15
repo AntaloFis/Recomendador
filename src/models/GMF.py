@@ -14,7 +14,7 @@ def model_mlp(nu, ni):
     user_latent = Flatten()(embedding_user)
     item_latent = Flatten()(embedding_items)
 
-    vect = multiply([user_latent, item_latent], axis=-1)
+    vect = multiply([user_latent, item_latent])
 
     prediction = Dense(1, activation='linear', name = 'prediction')(vect)
 
