@@ -16,7 +16,7 @@ def model_mlp(nu, ni):
 
     vect = multiply([user_latent, item_latent], axis=-1)
 
-    prediction = Dense(1, activation='linear', name = 'prediction')(layer_)
+    prediction = Dense(1, activation='linear', name = 'prediction')(vect)
 
     model = Model(inputs=[input_user, input_items],
                           outputs=prediction)
